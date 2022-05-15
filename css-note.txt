@@ -1,0 +1,119 @@
+Flexbox #1
+CSS Grids #2
+
+box-sizing: border-box; -> 會縮減content的空間(height/width), 分給padding, border
+
+Flexbox #1
+
+shorthand for flex shrink grow and basis
+
+flex: 1 0 0px -> grow, shrink, basis individually.
+
+<div class="flexbox-container">
+    <div class="flexbox-item flexbox-item-1></div>
+    <div class="flexbox-item flexbox-item-2></div>
+    <div class="flexbox-item flexbox-item-3></div>
+</div>
+
+set flexbox-container -> display: flex -> 可以看見三個item從直的排列變成橫的，
+因為有flexbox，所以如果壓縮整個畫面，這三個item也會動態調整。
+
+即使這三個item一開始有不同的min-height:(e.g. 100px, 200px, 300px)，
+但是因為flex有stretch的功能，所以他們在這個時候會一樣高。
+
+note: axis分為main axis（橫的）以及cross axis（直的），
+當你 Justify -> 處理 main axis
+或是 Align -> 處理 cross axis
+我們可以設定Flex direction，讓main and cross axis給翻轉過來。(flex-direction: column)
+
+1. Justify-content: 讓items在main axis中設定相對位置
+e.g. center, flex-start, flex-end / space-between , space-around(會預留最左右邊)
+2. align-items：決定每個item在cross axis中的長相,
+e.g. stretch（也就是大家都一樣高的原因）, center, flex-start, flex-end(此時會不一樣高)
+3. flex-wrap: warp; 讓items在被壓縮時不會擠在同一行，不該用橫的時候就會以直的方式表示。
+
+// 上面這些都可以打在flexbox-container即可
+如果打在flexbox-item上的話，效果是：
+1. Override flexbox-container effect
+2. 製造每個item獨特的效果
+
+1. flex-shrink: 0; -> 我們不希望畫面壓縮時會讓其被壓縮 -> 製造與其他item的不同
+2. flex-grow: 1; -> 在畫面壓縮仍有空間時，我們希望他能夠佔滿空間
+多個flex-grow: 1 （e.g. 2個）-> 會依照比例分配剩餘空間
+
+3. flex-basis: 0; -> 希望讓flex-grow能夠按照真實比例分配，而不是被define好的width影響
+-> Override 原本的設置
+4. align-self: center / flex-end , flex-start -> 讓自己處於cross line的什麼位置
+5. order: 1, 2, 3... 改變擺放位置
+
+CSS Grids #2
+
+display: grid
+grid-template-columns(rows): 2fr 1fr; (fraction)
+grid-template-coumns: repeate(4, 100px);
+grid-auto-rows: 150px; -> template 需要自己定義個數，其他未定義的，就交由auto來自行產生
+但有時候只定義150px，字數太多這些字就會跑出欄位外啊，所以可以要調整成：
+grid-auto-rows: minmax(150px, auto);
+grid-row/column-gap: 10px; (both: grid-gap: 10px)
+
+//scenario 1:
+.grid-container{
+    grid-template-columns: 200px 250px
+    grid-auto-rows: minmax(150px, auto)
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "sidebar content"
+}
+
+.grid-item-1 {
+    grid-area: header;
+}
+
+.grid-item-2 {
+    grid-area: sidebar;
+}
+
+.grid-item-3 {
+    grid-area: content;
+}
+
+//scenario 2:
+.grid-container{
+    grid-template-columns: 200px 250px
+    grid-auto-rows: minmax(150px, auto)
+}
+
+.grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    (or)
+    grid-column: 1 / -1;
+    (or)
+    grid-column: span 2;
+
+}
+
+.grid-item-2 {
+    grid-row: span 2;
+}
+
+.grid-item-3 {
+    grid-row: span 2;
+}
+
+//
+
+justify-content: center / start / end 
+                space-between / space-around / stretch
+                -> 把螢幕整個展開的話，這些items會放在哪些相對位置
+align-content: (same as above)
+height: 100vh -> 通常會跟align-content一起寫？
+
+justify-items: stretch / start / end / center; -> 選後面三個會有濃縮的感覺
+
+
+// item
+
+align-self: start;
+justify-self: center;

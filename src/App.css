@@ -1,0 +1,155 @@
+.login-bg{
+  width: 350px;
+  height: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.cathay {
+  width: 133px;
+  height: 103px;
+  margin: 32px 109px 14px 108px;
+  object-fit: contain;
+}
+
+.password-bar{
+  width: 196px;
+  height: 35px;
+  margin: 14px 77px 8.5px 77px;
+  border-radius: 5px;
+  border: solid 1px #e0e0e0;
+  background-color: #fff;
+}
+
+.password-word {
+  width: 30px;
+  height: 20px;
+  flex-grow: 0;
+  font-family: NotoSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bdbdbd;
+}
+
+.login-button{
+  width: 196px;
+  height: 35px;
+  margin: 8.5px 77px 9.5px 77px;
+  padding: 7.5px 83px 7.5px;
+  border-radius: 5px;
+  background-color: #26a862;
+}
+
+.login-word {
+  width: 30px;
+  height: 20px;
+  font-family: NotoSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+}
+
+.or-box {
+  width: 196px;
+  height: 18px;
+  margin: 9.5px 77px 9.5px 77px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.or-left {
+  width: 80px;
+  height: 1px;
+  margin: 8px 7px 9px 0;
+  background-color: #bdbdbd;
+}
+
+.or-right {
+  width: 80px;
+  height: 1px;
+  margin: 8px 0 9px 9px;
+  background-color: #bdbdbd;
+}
+
+.or {
+  width: 20px;
+  height: 18px;
+  flex-grow: 0;
+  font-family: NotoSans;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #828282;
+}
+
+.memword-bar{
+  width: 196px;
+  height: 35px;
+  /* flex-grow: 0; */
+  margin: 9.5px 77px 11.5px 77px;
+  padding: 7.5px 60.5px 7.5px 60.5px;
+  
+  border-radius: 5px;
+  background-color: #267c7d;
+}
+
+.memword-login {
+  width: 75px;
+  height: 20px;
+  font-family: NotoSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+}
+
+.Wallet-HaveYouSignOn {
+  width: 150px;
+  height: 48px;
+  margin: 11.5px 100px 11.5px 100px;
+  font-family: NotoSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.text-style-1 {
+  color: #26a862;
+}
+
+.end {
+  width: 350px;
+  height: 96px;
+  object-fit: contain;
+  justify-self: flex-end;
+}
