@@ -1,29 +1,28 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { ChangeEvent, useState } from "react";
-import { createMnemonic,checkMnemonicIsCorrect, getMnemonic } from "../api/utils/mnemonicAPI";
-import { DIDManager }from "../api/veramoDIDManager"
+import { createKey, importKey } from "../api/keyManager";
+import { createIdentifier } from "../api/didManager";
+import { createMnemonic } from "../api/utils/mnemonicAPI";
+
+
 
 export const Login = () => {
     const [errorMessages, setErrorMessages] = useState({ message: ''});
     const [state, setState] = useState({ value: '' });
-    const didManager = new DIDManager()
 
     const handleChange = (event: ChangeEvent<{ value: string }>) => {
         setState({ value: event?.currentTarget?.value });
     }
 
-    const handleClick2 = ()=> {
-        console.log(didManager)
-        // didManager.createDID().then(did => {
-        //     alert(did)
-        // })
-        // checkMnemonicIsCorrect(state?.value.split(" "))
+    const handleClick2 = async ()=> {
+        // console.log(getMnemonic())
+        // getMnemonic(console.log)
+        // getIdentifier(console.log)
     }
 
     const handleClick = () => {
-        // checkPassword(state?.value, function(result) {
-        //     if(!result) setErrorMessages({ message: "invalid password" });
-        // })
+        const mnemonic = createMnemonic()
+        console.log(mnemonic)
     }
 
     const renderErrorMessage = () => <div className="error">{errorMessages.message}</div>
