@@ -1,0 +1,86 @@
+{
+  "name": "chrome-react-extension-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^5.8.0",
+    "@ethersproject/bytes": "^5.6.1",
+    "@ethersproject/hash": "^5.6.0",
+    "@ethersproject/hdnode": "^5.6.0",
+    "@ethersproject/signing-key": "^5.6.0",
+    "@ethersproject/wallet": "^5.6.0",
+    "@ethersproject/wordlists": "^5.6.0",
+    "@metamask/obs-store": "^7.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/bcrypt": "^5.0.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.14.26",
+    "@types/react-dom": "^16.9.8",
+    "@veramo/core": "^3.1.2-next.88",
+    "@veramo/credential-w3c": "^3.1.0",
+    "@veramo/data-store": "^3.1.0",
+    "@veramo/data-store-json": "^3.1.2-next.55",
+    "@veramo/did-comm": "^3.1.0",
+    "@veramo/did-manager": "^3.1.0",
+    "@veramo/did-provider-ethr": "^3.1.0",
+    "@veramo/did-provider-web": "^3.1.0",
+    "@veramo/did-resolver": "^3.1.0",
+    "@veramo/key-manager": "^3.1.0",
+    "@veramo/kms-local": "^3.1.0",
+    "@veramo/selective-disclosure": "^3.1.0",
+    "aws-sdk": "^2.1131.0",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "bip39": "^3.0.4",
+    "did-resolver": "^3.2.0",
+    "ethr-did-resolver": "^5.0.4",
+    "mock-aws-s3": "^4.0.2",
+    "nock": "^13.2.4",
+    "object-hash": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-native-sqlite-storage": "^6.0.1",
+    "react-native-web": "^0.17.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "request": "^2.79.0",
+    "sqlite3": "^5.0.6",
+    "typescript": "4.0.5",
+    "uint8arrays": "^3.0.0",
+    "use-chrome-storage": "^1.0.6",
+    "uuid": "^8.3.2",
+    "web-did-resolver": "^2.0.16",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "INLINE_RUNTIME_CHUNK=false craco build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.126",
+    "@types/react-router-dom": "^5.1.6"
+  }
+}
